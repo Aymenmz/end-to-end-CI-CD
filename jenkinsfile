@@ -1,0 +1,15 @@
+pipeline{
+    
+    agent any
+
+    stages{
+
+        stage("checkout"){
+            steps {
+                script{
+                    git branch: 'main', url: "https://github.com/Aymenmz/end-to-end-CI-CD.git"
+                }
+            }
+        }
+    }
+}
